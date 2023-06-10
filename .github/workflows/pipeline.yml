@@ -27,8 +27,8 @@ jobs:
       - name: Build and tag Docker image
         run: |
           docker build -t portfolio-app:latest .
-          docker tag portfolio-app:latest ${{ steps.login-ecr.outputs.registry }}:latest
+          docker tag portfolio-app:latest ${{ env.ECR_REGISTRY_URL }}:latest
 
       - name: Push Docker image to ECR
         run: |
-          docker push ${{ steps.login-ecr.outputs.registry }}:latest
+          docker push ${{ env.ECR_REGISTRY_URL }}:latest
