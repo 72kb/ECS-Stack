@@ -6,28 +6,28 @@ import { BsGithub, BsArrowUpRightSquare } from "react-icons/bs"
 
 const projects = [
   {
-    name: "Thankful Thoughts",
+    name: "Fleetman Delivery Service",
     description:
-      "ThankfulThoughts is a web app that generates an appreciative sentence of something or someone you are thankful for.",
-    image: "/thankfulthoughts.png",
-    github: "https://github.com/hqasmei/thankful-thoughts",
-    link: "https://thankfulthoughts.io/",
+      "A delivery service deployed with kubernetes",
+    image: "/fleetman.png",
+    github: "https://github.com/72kb/fleetman-delivery-service",
+    link: "72kb.xyz",
   },
   {
-    name: "PlatoIO",
-    description: "PlatoIO is a to do list app that built using the PERN stack.",
-    image: "/platoio.png",
-    github: "https://github.com/hqasmei/platoio",
-    link: "https://platoio.com/register",
+    name: "Portfolio",
+    description: "Porfolio site deployed using github actions and AWS services",
+    image: "/portfolio.png",
+    github: "https://github.com/72kb/Portfolio",
+    link: "72kb.xyz",
   },
-  {
-    name: "Kator Family Photos",
-    description:
-      "Kator Family Photos is a photos and video digitization service in the LA area.",
-    image: "/familyphotos.png",
-    github: "https://github.com/hqasmei/katorfamilyphotos",
-    link: "https://katorfamilyphotos.com/",
-  },
+  // {
+  //   name: "Kator Family Photos",
+  //   description:
+  //     "Kator Family Photos is a photos and video digitization service in the LA area.",
+  //   image: "/familyphotos.png",
+  //   github: "https://github.com/hqasmei/katorfamilyphotos",
+  //   link: "https://katorfamilyphotos.com/",
+  // },
 ]
 
 const ProjectsSection = () => {
