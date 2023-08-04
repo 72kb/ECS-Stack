@@ -16,3 +16,23 @@ Can run the application in VS Code or a terminal and it will be available at `ht
 npm install
 npm run dev
 ```
+
+## Running Locally with Docker
+Can run this application witrh docker
+
+```
+docker build -t name:tag .
+docker run name:tag
+```
+
+## Provisioned with Terraform
+One click provisioning
+
+```
+terraform init
+terraform validate
+terraform plan
+terraform apply
+```
+
+## CI/CD with github actions
