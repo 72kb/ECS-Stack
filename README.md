@@ -6,14 +6,14 @@ This repository contains the source code and deployment configurations for the E
 
 ## Table of Contents
 
-- [Project Overview](## Project Overview)
-- [Architecture](## Architecture)
-- [Getting Started](## Getting Started)
-    - [Prerequisites](### Prerequisites)
-- [Usage](## Usage)
-- [Infrastructure as Code (Terraform)](## Infrastructure as Code (Terraform))
-- [CI/CD Pipeline (GitHub Actions)](## CI/CD Pipeline (GitHub Actions))
-- [Contributing](## Contributing)
+- Project Overview
+- Architecture
+- Getting Started
+    - Prerequisites
+- Usage
+- Infrastructure as Code (Terraform)
+- CI/CD Pipeline (GitHub Actions)
+- Contributing
 
 ## Project Overview
 
@@ -58,7 +58,6 @@ This project uses Terraform to manage the AWS infrastructure. The Terraform conf
     
     ```
     terraform init
-    
     ```
     
 3. Review and modify `terraform.tfvars/variables.tf` to match your project's requirements.
@@ -67,7 +66,6 @@ This project uses Terraform to manage the AWS infrastructure. The Terraform conf
     ```
     terraform plan
     terraform apply
-    
     ```
     
 
