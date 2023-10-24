@@ -1,38 +1,89 @@
-# Tailwind CSS and Next.js Portfolio
+# ECS Stack
 
-This is a template for creating a portfolio with Tailwind CSS and Next.js.
+**Project Description:**
 
-![Portfolio Demo](demo/demo.gif)
+This repository contains the source code and deployment configurations for the ECS Stack- Portfolio project, which leverages AWS Elastic Container Service (ECS) for container orchestration. The deployment is managed using Terraform as Infrastructure as Code (IaC), and the CI/CD pipeline is set up with GitHub Actions.
 
-## How it works
+## Table of Contents
 
-Fork or download the repo and change whatever you need to change for your needs.
+- [Project Overview](## Project Overview)
+- [Architecture](## Architecture)
+- [Getting Started](## Getting Started)
+    - [Prerequisites](### Prerequisites)
+- [Usage](## Usage)
+- [Infrastructure as Code (Terraform)](## Infrastructure as Code (Terraform))
+- [CI/CD Pipeline (GitHub Actions)](## CI/CD Pipeline (GitHub Actions))
+- [Contributing](## Contributing)
 
-## Running Locally
+## Project Overview
 
-Can run the application in VS Code or a terminal and it will be available at `http://localhost:3000`.
+This project seamlessly automates the deployment of a containerized application using AWS Fargate on Amazon Elastic Container Service (ECS). The architecture is meticulously designed to facilitate a swift journey from code commit to deployment, eliminating the need for manual intervention. The AWS infrastructure is provisioned and managed with Terraform, serving as Infrastructure as Code (IaC). GitHub Actions orchestrates the pipeline, ensuring the application image is built, pushed to AWS Elastic Container Registry (ECR), and the infrastructure is deployed with Terraform, effectively running the container on ECS. This end-to-end automation streamlines the development and deployment process, enhancing efficiency and reducing manual tasks.
 
-```bash
+## Architecture
+
+![Infrastructure](demo/infra.jpeg)
+
+## Getting Started
+
+### Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- AWS account with appropriate permissions
+- GitHub repository for your project
+- Terraform CLI installed
+- AWS CLI installed and configured
+- Docker for local container testing
+
+## Usage
+
+To run locally
+
+```jsx
 npm install
 npm run dev
+
+---
+
+docker build -t <name:tag> .
+docker run <name:tag>
 ```
 
-## Running Locally with Docker
-Can run this application witrh docker
+## Infrastructure as Code (Terraform)
 
-```
-docker build -t name:tag .
-docker run name:tag
-```
+This project uses Terraform to manage the AWS infrastructure. The Terraform configurations can be found in the `terraform/` directory. To apply these configurations, follow these steps:
 
-## Provisioned with Terraform
-One click provisioning
+1. Change your working directory to `terraform/`.
+2. Initialize Terraform:
+    
+    ```
+    terraform init
+    
+    ```
+    
+3. Review and modify `terraform.tfvars/variables.tf` to match your project's requirements.
+4. Apply the configurations:
+    
+    ```
+    terraform plan
+    terraform apply
+    
+    ```
+    
 
-```
-terraform init
-terraform validate
-terraform plan
-terraform apply
-```
+## CI/CD Pipeline (GitHub Actions)
 
-## CI/CD with github actions
+The CI/CD pipeline is configured in GitHub Actions to automate the build and deployment process. It includes the following stages:
+
+- **Build**: Builds Docker containers from the source code.
+- **Test**: Runs tests to ensure code quality.
+- **Deploy**: Deploys the application to AWS ECS.
+
+To set up GitHub Actions for your repository:
+
+1. Create the necessary GitHub Secrets for AWS credentials.
+2. Modify the workflow configuration in the `.github/workflows` directory to match your project's specifics.
+
+## Contributing
+
+Contributions are welcome! Feel free to open issues or submit pull requests to help improve this project.
